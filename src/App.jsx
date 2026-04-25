@@ -198,6 +198,12 @@ function App() {
     { label: 'Partnerships', href: '#partnerships' },
     { label: 'Impact', href: '#impact' },
   ]
+  const headerMenuHrefs = new Set(
+    [...headerPrimaryLinks, ...headerMoreLinks].map((link) => link.href),
+  )
+  const mobileQuickLinks = mobileFooterLinks.filter(
+    (link) => !headerMenuHrefs.has(link.href),
+  )
 
   const closeMenu = useCallback(() => setMenuOpen(false), [])
 
@@ -271,9 +277,20 @@ function App() {
                 aria-expanded={menuOpen}
                 aria-controls="site-menu"
                 onClick={() => setMenuOpen((o) => !o)}
+                aria-label={menuOpen ? 'Close menu' : 'Open menu'}
               >
-                {menuOpen ? 'Close' : 'Menu'}
+                <span className="nav-bar__toggle-lines" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </span>
               </button>
+
+              <div
+                className="nav-backdrop"
+                onClick={closeMenu}
+                aria-hidden={!menuOpen}
+              />
 
               <nav id="site-menu" className="nav-bar__menu" aria-label="Primary">
                 {headerPrimaryLinks.map((link) => (
@@ -300,14 +317,16 @@ function App() {
                 >
                   Get in touch
                 </a>
-                <div className="nav-mobile-links">
-                  <p className="nav-mobile-links__title">Quick links</p>
-                  {mobileFooterLinks.map((link) => (
-                    <a key={link.key} href={link.href} onClick={closeMenu}>
-                      {link.label}
-                    </a>
-                  ))}
-                </div>
+                {mobileQuickLinks.length > 0 ? (
+                  <div className="nav-mobile-links">
+                    <p className="nav-mobile-links__title">Quick links</p>
+                    {mobileQuickLinks.map((link) => (
+                      <a key={link.key} href={link.href} onClick={closeMenu}>
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                ) : null}
               </nav>
             </div>
           </div>
