@@ -186,6 +186,18 @@ function App() {
       key: `${col.title}-${link.label}`,
     })),
   )
+  const headerPrimaryLinks = [
+    { label: 'About', href: '#about' },
+    { label: 'Services', href: '#services' },
+    { label: 'Projects', href: '#projects' },
+    { label: 'Contact', href: '#contact' },
+  ]
+  const headerMoreLinks = [
+    { label: 'Leadership', href: '#cxo' },
+    { label: 'Memberships', href: '#memberships' },
+    { label: 'Partnerships', href: '#partnerships' },
+    { label: 'Impact', href: '#impact' },
+  ]
 
   const closeMenu = useCallback(() => setMenuOpen(false), [])
 
@@ -264,18 +276,23 @@ function App() {
               </button>
 
               <nav id="site-menu" className="nav-bar__menu" aria-label="Primary">
-                <a href="#about" onClick={closeMenu}>
-                  About
-                </a>
-                <a href="#services" onClick={closeMenu}>
-                  Services
-                </a>
-                <a href="#projects" onClick={closeMenu}>
-                  Projects
-                </a>
-                <a href="#contact" onClick={closeMenu}>
-                  Contact
-                </a>
+                {headerPrimaryLinks.map((link) => (
+                  <a key={link.href} href={link.href} onClick={closeMenu}>
+                    {link.label}
+                  </a>
+                ))}
+                <div className="nav-dropdown">
+                  <button type="button" className="nav-dropdown__toggle" aria-haspopup="true">
+                    More
+                  </button>
+                  <div className="nav-dropdown__menu" role="menu" aria-label="More sections">
+                    {headerMoreLinks.map((link) => (
+                      <a key={link.href} href={link.href} onClick={closeMenu} role="menuitem">
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
                 <a
                   className="nav-bar__cta"
                   href="mailto:ydb@unmaicarbon.earth"
@@ -532,7 +549,7 @@ function App() {
         </div>
       </section>
 
-      <section className="band band--light impact" aria-labelledby="impact-heading">
+      <section id="impact" className="band band--light impact" aria-labelledby="impact-heading">
         <div className="impact__inner section">
           <div className="impact__intro">
             <p className="kicker kicker--forest">Delivery footprint</p>
