@@ -2450,14 +2450,80 @@ button,
 
   .footer-new__cols {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .footer-new__brand {
+    gap: 20px;
+    padding: 18px 16px;
+    border: 1px solid #e6e9ef;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+  }
+
+  .footer-new__logo-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .footer-new__logo-box img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-new__brand-name {
+    font-size: 30px;
+    line-height: 1.05;
+  }
+
+  .footer-new__tagline {
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .footer-new__address {
+    max-width: none;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .footer-new__social {
+    margin-top: 14px;
+  }
+
+  .footer-new__cols > div {
+    padding: 14px 16px;
+    border: 1px solid #e6e9ef;
+    border-radius: 12px;
+    background: #ffffff;
+  }
+
+  .footer-new__head {
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.14em;
+    color: #2563eb;
+    font-weight: 800;
+  }
+
+  .footer-new__cols a {
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
   }
 
   .footer-new__bottom {
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     height: auto;
-    padding-block: 16px;
+    padding: 14px 16px;
+    gap: 6px;
+    text-align: center;
   }
 
   .assignments-timeline::before {
@@ -3355,21 +3421,56 @@ button,
     gap: 18px;
   }
 
+  .footer-new__bottom-wrap {
+    background: linear-gradient(180deg, #3f434e 0%, #373b46 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-new__bottom {
+    padding: 14px 12px 16px;
+    gap: 5px;
+  }
+
   .footer-new__brand-name {
-    font-size: 20px;
+    font-size: 32px;
     line-height: 1.1;
   }
 
   .footer-new__tagline {
-    margin-top: 10px;
+    margin-top: 12px;
     font-size: 12px;
     line-height: 1.5;
   }
 
   .footer-new__address {
-    margin-top: 8px;
+    margin-top: 10px;
     font-size: 12px;
     line-height: 1.5;
+  }
+
+  .footer-new__cols > div {
+    padding: 12px 14px;
+  }
+
+  .footer-new__head {
+    margin-bottom: 8px;
+    font-size: 12px;
+    letter-spacing: 0.13em;
+    color: #2563eb;
+  }
+
+  .footer-new__cols a {
+    font-size: 13px;
+    margin-bottom: 11px;
+    line-height: 1.5;
+  }
+
+  .footer-new__bottom p {
+    width: 100%;
+    font-size: 11px;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    color: rgba(255, 255, 255, 0.95);
   }
 }
 

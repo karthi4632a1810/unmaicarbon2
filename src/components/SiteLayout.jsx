@@ -37,15 +37,6 @@ function SiteLayout() {
   const { pathname } = useLocation()
   const closeMenu = useCallback(() => setMenuOpen(false), [])
 
-  const mobileFooterLinks = [
-    { key: 'quick-home', label: 'Home', href: '/' },
-    { key: 'quick-services', label: 'Services', href: '/services' },
-    { key: 'quick-projects', label: 'Projects', href: '/projects' },
-    { key: 'quick-memberships', label: 'Memberships', href: '/memberships' },
-    { key: 'quick-partnerships', label: 'Partnerships', href: '/partnerships' },
-    { key: 'quick-contact', label: 'Contact', href: '/contact' },
-  ]
-
   useEffect(() => {
     const onScroll = () => setHeaderCompact(window.scrollY > 150)
     onScroll()
@@ -115,14 +106,6 @@ function SiteLayout() {
                 >
                   Get in touch
                 </a>
-                <div className="nav-mobile-links">
-                  <p className="nav-mobile-links__title">Quick links</p>
-                  {mobileFooterLinks.map((link) => (
-                    <NavLink key={link.key} to={link.href} onClick={closeMenu}>
-                      {link.label}
-                    </NavLink>
-                  ))}
-                </div>
               </nav>
             </div>
             <div className="nav-backdrop" onClick={closeMenu} aria-hidden={!menuOpen} />
