@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
-import { contact, footerConfidential } from '../capabilityContent'
+import { contact, footerConfidential, gmailComposeHref } from '../capabilityContent'
 import brandLogo from '../assets/logo.png'
 
 function FooterSocialLinkedInIcon({ className }) {
@@ -104,7 +104,13 @@ function SiteLayout() {
                     ))}
                   </div>
                 </div>
-                <a className="nav-bar__cta" href="mailto:ydb@unmaicarbon.earth" onClick={closeMenu}>
+                <a
+                  className="nav-bar__cta"
+                  href={gmailComposeHref(contact.email)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={closeMenu}
+                >
                   Get in touch
                 </a>
                 <div className="nav-mobile-links">
@@ -171,7 +177,9 @@ function SiteLayout() {
               <a href={contact.linkedin} target="_blank" rel="noreferrer">
                 LinkedIn
               </a>
-              <a href={`mailto:${contact.email}`}>Email Us</a>
+              <a href={gmailComposeHref(contact.email)} target="_blank" rel="noopener noreferrer">
+                Email Us
+              </a>
             </div>
           </div>
         </div>

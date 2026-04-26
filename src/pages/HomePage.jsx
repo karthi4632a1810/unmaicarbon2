@@ -10,6 +10,7 @@ import {
   aboutParagraphs,
   company,
   contact,
+  gmailComposeHref,
   directAssignments,
   footerConfidential,
   headlineStats,
@@ -203,7 +204,12 @@ function HomePage() {
               Carbon Solutions is ready to deliver tailored advisory, infrastructure, and financing
               solutions.
             </p>
-            <a className="contact-frame7__mail-btn" href={`mailto:${contact.email}`}>
+            <a
+              className="contact-frame7__mail-btn"
+              href={gmailComposeHref(contact.email)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Send us an email
             </a>
             <div className="contact-frame7__person-card">
@@ -215,7 +221,9 @@ function HomePage() {
                   <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
                     <ContactIconMail />
                   </span>
-                  <a href={`mailto:${contact.email}`}>{contact.email}</a>
+                  <a href={gmailComposeHref(contact.email)} target="_blank" rel="noopener noreferrer">
+                    {contact.email}
+                  </a>
                 </li>
                 <li>
                   <span className="contact-frame7__row-icon-wrap" aria-hidden="true">

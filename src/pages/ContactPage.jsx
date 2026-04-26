@@ -5,7 +5,29 @@ import {
   ContactIconPhone,
 } from '../components/ContactInfoIcons'
 import PageBanner from '../components/PageBanner'
-import { contact, footerConfidential } from '../capabilityContent'
+import { contact, footerConfidential, gmailComposeHref } from '../capabilityContent'
+
+function submitInquiryToGmail(e) {
+  e.preventDefault()
+  const fd = new FormData(e.currentTarget)
+  const name = String(fd.get('name') ?? '').trim()
+  const email = String(fd.get('email') ?? '').trim()
+  const organization = String(fd.get('organization') ?? '').trim()
+  const message = String(fd.get('message') ?? '').trim()
+  const body = [
+    `Name: ${name}`,
+    `Reply email: ${email}`,
+    `Organization: ${organization || '—'}`,
+    '',
+    'Message:',
+    message,
+  ].join('\n')
+  const href = gmailComposeHref(contact.email, {
+    subject: 'Inquiry from UNMAI Carbon website',
+    body,
+  })
+  window.open(href, '_blank', 'noopener,noreferrer')
+}
 
 function ContactPage() {
   return (
@@ -25,7 +47,7 @@ function ContactPage() {
               tailored response.
             </p>
           </div>
-          <form className="contact-form" action={`mailto:${contact.email}`} method="post" encType="text/plain">
+          <form className="contact-form" onSubmit={submitInquiryToGmail}>
             <label className="contact-form__field">
               <span>Full name</span>
               <input type="text" name="name" placeholder="Your full name" required />
@@ -63,7 +85,12 @@ function ContactPage() {
               Carbon Solutions is ready to deliver tailored advisory, infrastructure, and financing
               solutions.
             </p>
-            <a className="contact-frame7__mail-btn" href={`mailto:${contact.email}`}>
+            <a
+              className="contact-frame7__mail-btn"
+              href={gmailComposeHref(contact.email)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Send us an email
             </a>
             <div className="contact-frame7__person-card">
@@ -75,7 +102,13 @@ function ContactPage() {
                   <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
                     <ContactIconMail />
                   </span>
-                  <a href={`mailto:${contact.email}`}>{contact.email}</a>
+                  <a
+                    href={gmailComposeHref(contact.email)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {contact.email}
+                  </a>
                 </li>
                 <li>
                   <span className="contact-frame7__row-icon-wrap" aria-hidden="true">

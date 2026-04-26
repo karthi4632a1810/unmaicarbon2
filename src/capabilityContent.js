@@ -386,6 +386,17 @@ export const contact = {
   address: '10, Sim Lim Tower, Jalan Besar #10-10, Singapore 208787',
 }
 
+/** Opens Gmail “compose” in the browser (avoids `mailto:` using desktop Outlook or other clients). */
+export function gmailComposeHref(to, { subject = '', body = '' } = {}) {
+  const params = new URLSearchParams()
+  params.set('view', 'cm')
+  params.set('fs', '1')
+  params.set('to', to)
+  if (subject) params.set('su', subject)
+  if (body) params.set('body', body)
+  return `https://mail.google.com/mail/?${params.toString()}`
+}
+
 export const footerConfidential = 'Confidential – Not for Circulation'
 
 export const footerColumns = [
@@ -417,7 +428,7 @@ export const footerColumns = [
   {
     title: 'Connect',
     links: [
-      { label: 'Email', href: 'mailto:ydb@unmaicarbon.earth' },
+      { label: 'Email', href: gmailComposeHref(contact.email) },
       { label: 'Website', href: 'https://www.unmaicarbon.earth' },
       { label: 'LinkedIn', href: 'https://www.linkedin.com/in/nithyanandam-yuvaraj-dinesh-babu-a1076b3/' },
     ],
