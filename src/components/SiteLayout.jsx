@@ -29,7 +29,6 @@ const headerPrimaryLinks = [
 const headerMoreLinks = [
   { label: 'Memberships', href: '/memberships' },
   { label: 'Partnerships', href: '/partnerships' },
-  { label: 'Impact', href: '/impact' },
 ]
 
 function SiteLayout() {
@@ -44,7 +43,6 @@ function SiteLayout() {
     { key: 'quick-projects', label: 'Projects', href: '/projects' },
     { key: 'quick-memberships', label: 'Memberships', href: '/memberships' },
     { key: 'quick-partnerships', label: 'Partnerships', href: '/partnerships' },
-    { key: 'quick-impact', label: 'Impact', href: '/impact' },
     { key: 'quick-contact', label: 'Contact', href: '/contact' },
   ]
 

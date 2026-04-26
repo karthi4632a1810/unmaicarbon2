@@ -3,7 +3,6 @@ import './App.css'
 import SiteLayout from './components/SiteLayout'
 import ContactPage from './pages/ContactPage'
 import HomePage from './pages/HomePage'
-import ImpactPage from './pages/ImpactPage'
 import MembershipsPage from './pages/MembershipsPage'
 import PartnershipsPage from './pages/PartnershipsPage'
 import ProjectDetailPage from './pages/ProjectDetailPage'
@@ -20,7 +19,7 @@ function App() {
         <Route path="/project/:projectSlug" element={<ProjectDetailPage />} />
         <Route path="/memberships" element={<MembershipsPage />} />
         <Route path="/partnerships" element={<PartnershipsPage />} />
-        <Route path="/impact" element={<ImpactPage />} />
+        <Route path="/impact" element={<Navigate to="/#impact-cxo" replace />} />
         <Route path="/contact" element={<ContactPage />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />

@@ -14,6 +14,7 @@ import {
   directAssignments,
   footerConfidential,
   headlineStats,
+  impactStats,
   pillars,
 } from '../capabilityContent'
 import { buildProjectSlug, getProjectSpotlightImage, getProjectSummary } from '../projectUtils'
@@ -190,6 +191,29 @@ function HomePage() {
                 </Link>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      <section
+        className="band band--light impact"
+        id="impact-cxo"
+        aria-labelledby="impact-cxo-heading"
+      >
+        <div className="impact__inner section">
+          <div className="impact__intro">
+            <p className="kicker kicker--forest">Delivery footprint</p>
+            <h2 id="impact-cxo-heading" className="section-title">
+              Selected CXO &amp; platform metrics
+            </h2>
+          </div>
+          <div className="impact__stats">
+            {impactStats.map((stat) => (
+              <article key={stat.label} className="impact-stat">
+                <p className={`impact-stat__value impact-stat__value--${stat.tone}`}>{stat.value}</p>
+                <p className="impact-stat__label">{stat.label}</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
