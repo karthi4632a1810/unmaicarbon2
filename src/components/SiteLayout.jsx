@@ -54,6 +54,11 @@ function SiteLayout() {
   }, [])
 
   useEffect(() => {
+    document.body.classList.toggle('menu-open', menuOpen)
+    return () => document.body.classList.remove('menu-open')
+  }, [menuOpen])
+
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [pathname])
 
@@ -83,7 +88,6 @@ function SiteLayout() {
                   <span />
                 </span>
               </button>
-              <div className="nav-backdrop" onClick={closeMenu} aria-hidden={!menuOpen} />
               <nav id="site-menu" className="nav-bar__menu" aria-label="Primary">
                 {headerPrimaryLinks.map((link) => (
                   <NavLink key={link.href} to={link.href} onClick={closeMenu}>
@@ -121,6 +125,7 @@ function SiteLayout() {
                 </div>
               </nav>
             </div>
+            <div className="nav-backdrop" onClick={closeMenu} aria-hidden={!menuOpen} />
           </div>
         </div>
       </header>
