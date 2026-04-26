@@ -48,6 +48,29 @@
   text-align: justify;
 }
 
+.page .service-card__list {
+  text-align: justify;
+}
+
+.page .stats p,
+.page .impact p {
+  text-align: left;
+}
+
+.page .cxo-accordion .cxo-details__body {
+  text-align: justify;
+}
+
+.page .memberships-note__role,
+.page .memberships-note__date {
+  text-align: left;
+}
+
+.page .membership-card__role,
+.page .membership-card__date {
+  text-align: left;
+}
+
 .page--menu-open {
   overflow: visible;
 }
@@ -1510,7 +1533,6 @@ button,
 
 .memberships-note__head {
   text-align: left;
-  max-width: 720px;
   margin-bottom: clamp(24px, 3.2vw, 32px);
 }
 
@@ -1537,7 +1559,6 @@ button,
   font-size: 15px;
   line-height: 1.6;
   color: #64748b;
-  max-width: 62ch;
 }
 
 .memberships-note__grid {
