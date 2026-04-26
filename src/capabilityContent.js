@@ -18,33 +18,45 @@ export const pillars = [
     shortTitle: 'Advisory',
     title: 'Pillar 1 — Net Zero Transition, Climate Policy & Carbon Market Advisory',
     servicesLabel: 'Services',
+    overview:
+      'End-to-end advisory support for governments, corporates, and institutions designing credible transition pathways and carbon market participation frameworks.',
     bullets: [
-      'Net Zero strategies for governments and corporates',
-      'Long-term climate policy design (NDCs, LT-LEDS, CBAM readiness)',
-      'Sectoral decarbonization planning and pathway development',
-      'Capacity building and institutional readiness programs',
+      'Net Zero strategy development for sovereigns, ministries, and private sector entities with science-based implementation pathways.',
+      'Climate policy and regulatory design support, including NDC updates, LT-LEDS architecture, and CBAM preparedness roadmaps.',
+      'Sector-level decarbonization plans for power, transport, industry, and waste, with phased timelines and measurable milestones.',
+      'Carbon market positioning and advisory for compliance and voluntary mechanisms aligned with Article 6 and high-integrity principles.',
+      'Institutional readiness and governance design, including role allocation, accountability frameworks, and cross-agency coordination.',
+      'Capacity building programs for policymakers and delivery teams through workshops, masterclasses, and implementation playbooks.',
     ],
   },
   {
     shortTitle: 'Finance',
     title: 'Pillar 2 — Climate Finance & Investment Strategy',
     servicesLabel: 'Services',
+    overview:
+      'Capital strategy and climate finance structuring services to unlock investable pipelines and channel funding into measurable mitigation outcomes.',
     bullets: [
-      'Structuring results-based finance and carbon credit-linked instruments',
-      'Policy and investment advisory for scaling carbon finance',
-      'ESG and impact-driven capital mobilization strategies',
-      'Support for MRV-aligned financing mechanisms',
+      'Structuring results-based finance instruments, carbon-linked revenue models, and blended finance facilities for scaled deployment.',
+      'Investment advisory for climate project pipelines, including project bankability, risk profiling, and investor engagement support.',
+      'Carbon finance strategy for Article 6, CORSIA, and voluntary markets with value-chain level monetization planning.',
+      'ESG and impact capital mobilization strategy across public, private, and concessional funding channels.',
+      'Financial architecture for MRV-aligned disbursement mechanisms with transparent performance tracking and reporting.',
+      'Support for fund design, governance structures, and term-sheet level inputs for climate transition and decarbonization vehicles.',
     ],
   },
   {
     shortTitle: 'Digital',
     title: 'Pillar 3 — Carbon Market Infrastructure & Governance',
     servicesLabel: 'Services',
+    overview:
+      'Digital public infrastructure and governance architecture for trusted, interoperable, and scalable carbon market systems.',
     bullets: [
-      'Design of national and subnational carbon market frameworks',
-      'Article 6 readiness and cooperative approaches',
-      'Blockchain-enabled trust architecture for registries and MRV interoperability',
-      'Support for climate data standardization and infrastructure governance',
+      'Design of national and subnational carbon market infrastructure, including registries, data layers, and governance controls.',
+      'Article 6 implementation readiness support with digital workflows for authorization, transfer, and corresponding adjustment tracking.',
+      'Registry and dMRV system architecture for interoperability between domestic systems, international platforms, and standard bodies.',
+      'Blockchain-enabled trust layer design for provenance, traceability, and transaction integrity across carbon assets.',
+      'Climate data standards alignment and metadata architecture to improve comparability, transparency, and audit-readiness.',
+      'Operating model and governance blueprint for long-term infrastructure stewardship, access management, and system resilience.',
     ],
   },
 ]
@@ -238,16 +250,60 @@ export const cxoExperience = [
   },
 ]
 
-export const memberships = [
-  'BioCarbon Standard — Member, Digital MRV Working Group (Sept 2025–present)',
-  'Climate Action Data Trust — Member, User Forum (Aug 2025–present)',
-  'ISO 14060 Net Zero Standards (World Bank Representative) — TC 207/SC 7/WG 18 (Aug 2024–present)',
-  'ISO Sustainable Finance — Member, TC 322/WG5 Carbon Data Model (Aug 2025–present)',
-  'Technical Committee for Environmental Management and Sustainable Finance (EMSF), Singapore',
-  'Carbon Data Open Protocol (Sylvera, UK & GCMU, US) — Member, Technical Working Group (Aug 2024–present)',
-  'Voluntary Carbon Market Initiative (VCMI), UK — Member, Stakeholders Forum (March 2024–present)',
-  'UNFCCC Roster of Experts',
+/** Structured list for the “Additional active affiliations” block on Memberships. */
+export const additionalActiveAffiliations = [
+  {
+    badge: 'Global standard',
+    title: 'BioCarbon Standard',
+    role: 'Member, digital MRV working group',
+    date: 'Sept 2025 – Present',
+  },
+  {
+    badge: 'Data integrity',
+    title: 'Climate Action Data Trust',
+    role: 'Member, user forum',
+    date: 'Aug 2025 – Present',
+  },
+  {
+    badge: 'ISO series',
+    title: 'ISO 14060 net zero standards',
+    role: 'World bank representative — TC 207/SC 7/WG 18',
+    date: 'Aug 2024 – Present',
+  },
+  {
+    badge: 'ISO standards',
+    title: 'ISO sustainable finance',
+    role: 'Member, TC 322/WG5 carbon data model',
+    date: 'Aug 2025 – Present',
+  },
+  {
+    badge: 'Technical committee',
+    title: 'EMSF, Singapore',
+    role: 'Environmental management & sustainable finance committee',
+    date: 'Active',
+  },
+  {
+    badge: 'Digital & data',
+    title: 'Carbon data open protocol',
+    role: 'Member, technical working group (Sylvera, UK & GCMU, US)',
+    date: 'Aug 2024 – Present',
+  },
+  {
+    badge: 'Market integrity',
+    title: 'VCMI',
+    role: 'Member, stakeholders forum (UK)',
+    date: 'March 2024 – Present',
+  },
+  {
+    badge: 'UN & policy',
+    title: 'UNFCCC',
+    role: 'Roster of experts',
+    date: 'Active',
+  },
 ]
+
+export const additionalAffiliationsIntro =
+  'Alongside our governing memberships, we maintain other collaborative roles across standards, data infrastructure, and policy dialogue—supporting implementation at pace without compromising rigor or transparency.'
 
 export const partnershipsIntro =
   'UNMAI Carbon maintains active partnerships and engagements across the global carbon ecosystem:'
