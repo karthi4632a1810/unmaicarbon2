@@ -42,6 +42,9 @@
   color: var(--ink-soft);
   background: var(--surface);
   min-height: 100vh;
+}
+
+.page p {
   text-align: justify;
 }
 
