@@ -1,3 +1,9 @@
+import {
+  ContactIconLinkedIn,
+  ContactIconMail,
+  ContactIconMapPin,
+  ContactIconPhone,
+} from '../components/ContactInfoIcons'
 import PageBanner from '../components/PageBanner'
 import { contact, footerConfidential } from '../capabilityContent'
 
@@ -66,11 +72,27 @@ function ContactPage() {
               <p className="contact-frame7__role">{contact.role}</p>
               <ul className="contact-frame7__list">
                 <li>
+                  <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
+                    <ContactIconMail />
+                  </span>
                   <a href={`mailto:${contact.email}`}>{contact.email}</a>
                 </li>
-                <li>{contact.phone}</li>
-                <li>{contact.address}</li>
                 <li>
+                  <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
+                    <ContactIconPhone />
+                  </span>
+                  <span>{contact.phone}</span>
+                </li>
+                <li>
+                  <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
+                    <ContactIconMapPin />
+                  </span>
+                  <span>{contact.address}</span>
+                </li>
+                <li>
+                  <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
+                    <ContactIconLinkedIn />
+                  </span>
                   <a href={contact.linkedin} target="_blank" rel="noreferrer">
                     LinkedIn Profile
                   </a>

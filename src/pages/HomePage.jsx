@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
 import heroVideo from '../assets/unmai-carbon.mp4'
 import {
+  ContactIconLinkedIn,
+  ContactIconMail,
+  ContactIconMapPin,
+  ContactIconPhone,
+} from '../components/ContactInfoIcons'
+import {
   aboutParagraphs,
   company,
   contact,
@@ -109,7 +115,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="band band--dark services">
+      <section className="band band--dark services services--home">
         <div className="services__inner section">
           <header className="services__header">
             <p className="kicker kicker--lime">Core services</p>
@@ -150,7 +156,7 @@ function HomePage() {
           <header className="project-teasers__head">
             <p className="kicker kicker--forest">Project spotlight</p>
             <h2 id="project-teasers-heading" className="section-title">
-              Select projects
+              Our project highlights
             </h2>
           </header>
           <div className="project-teasers__grid">
@@ -206,11 +212,27 @@ function HomePage() {
               <p className="contact-frame7__role">{contact.role}</p>
               <ul className="contact-frame7__list">
                 <li>
+                  <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
+                    <ContactIconMail />
+                  </span>
                   <a href={`mailto:${contact.email}`}>{contact.email}</a>
                 </li>
-                <li>{contact.phone}</li>
-                <li>{contact.address}</li>
                 <li>
+                  <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
+                    <ContactIconPhone />
+                  </span>
+                  <span>{contact.phone}</span>
+                </li>
+                <li>
+                  <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
+                    <ContactIconMapPin />
+                  </span>
+                  <span>{contact.address}</span>
+                </li>
+                <li>
+                  <span className="contact-frame7__row-icon-wrap" aria-hidden="true">
+                    <ContactIconLinkedIn />
+                  </span>
                   <a href={contact.linkedin} target="_blank" rel="noreferrer">
                     LinkedIn Profile
                   </a>

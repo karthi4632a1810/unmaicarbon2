@@ -9,7 +9,7 @@ function ServicesPage() {
         backgroundImage="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1800&q=80"
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'Services' }]}
       />
-      <section className="band band--dark services">
+      <section className="band band--dark services services--page">
         <div className="services__inner section">
           <header className="services__header">
             <p className="kicker kicker--lime">Core services</p>

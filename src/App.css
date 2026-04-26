@@ -665,8 +665,9 @@ button,
 
 .services__columns {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  /* Single column for /services; three columns on home via .services--home */
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 .service-card {
@@ -737,8 +738,8 @@ button,
   letter-spacing: -0.02em;
 }
 
-.services .services__columns {
-  grid-template-columns: 1fr;
+.services.services--home .services__columns {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
 }
 
@@ -842,6 +843,69 @@ button,
 
 .services .service-card__list li + li {
   margin-top: 12px;
+}
+
+/* Home pillar grid: tighter type so 3-up cards don’t overflow */
+.services.services--home .service-card {
+  padding: 22px 18px 20px;
+}
+
+.services.services--home .service-card__top {
+  margin-bottom: 8px;
+}
+
+.services.services--home .service-card__number {
+  font-size: clamp(26px, 2.4vw, 36px);
+}
+
+.services.services--home .service-card__glyph {
+  width: 22px;
+  height: 22px;
+}
+
+.services.services--home .service-card__badge {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.services.services--home .service-card__title {
+  margin: 0 0 8px;
+  font-size: clamp(16px, 1.2vw, 20px);
+  line-height: 1.2;
+}
+
+.services.services--home .service-card__overview {
+  margin: 0 0 10px;
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.services.services--home .service-card__label {
+  margin: 0 0 8px;
+  font-size: 9.5px;
+  letter-spacing: 0.1em;
+}
+
+.services.services--home .service-card__list {
+  padding: 10px 0 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.services.services--home .service-card__list li {
+  padding-left: 16px;
+}
+
+.services.services--home .service-card__list li::before {
+  top: 0.52em;
+  width: 5px;
+  height: 5px;
+  left: 0;
+}
+
+.services.services--home .service-card__list li + li {
+  margin-top: 6px;
 }
 
 /* ——— Capability shell ——— */
@@ -1866,10 +1930,30 @@ button,
 }
 
 .contact-frame7__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
   padding: 16px 24px;
   border-bottom: 1px solid #f3f4f6;
   font-size: 13.5px;
   color: #374151;
+}
+
+.contact-frame7__row-icon-wrap {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  margin-top: 1px;
+}
+
+.contact-frame7__row-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 .contact-frame7__list li:last-child {
@@ -2001,11 +2085,15 @@ button,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  color: #0f172a;
 }
 
-.footer-new__social img {
+.footer-new__social img,
+.footer-new__social-icon {
   width: 13px;
   height: 13px;
+  flex-shrink: 0;
+  display: block;
 }
 
 .footer-new__cols {
@@ -2904,12 +2992,20 @@ button,
     font-size: clamp(28px, 5vw, 42px);
   }
 
-  .services .service-card__title {
+  .services.services--page .service-card__title {
     font-size: clamp(24px, 2.4vw, 30px);
   }
 
-  .services .service-card__list {
+  .services.services--page .service-card__list {
     font-size: 15px;
+  }
+
+  .services.services--home .service-card__title {
+    font-size: clamp(16px, 2.1vw, 20px);
+  }
+
+  .services.services--home .service-card__list {
+    font-size: 12px;
   }
 
   .project-teasers__grid {
@@ -2964,16 +3060,32 @@ button,
     padding: 22px 18px;
   }
 
-  .services .service-card__number {
+  .services.services--page .service-card__number {
     font-size: 40px;
   }
 
-  .services .service-card__title {
+  .services.services--page .service-card__title {
     font-size: 22px;
   }
 
-  .services .service-card__list {
+  .services.services--page .service-card__list {
     font-size: 14px;
+  }
+
+  .services.services--home .service-card {
+    padding: 18px 16px 16px;
+  }
+
+  .services.services--home .service-card__number {
+    font-size: 32px;
+  }
+
+  .services.services--home .service-card__title {
+    font-size: 16px;
+  }
+
+  .services.services--home .service-card__list {
+    font-size: 12px;
   }
 
   .project-teasers__grid {
