@@ -42,6 +42,7 @@
   color: var(--ink-soft);
   background: var(--surface);
   min-height: 100vh;
+  text-align: justify;
 }
 
 .page--menu-open {
