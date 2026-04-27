@@ -44,21 +44,9 @@
   min-height: 100vh;
 }
 
-.page p {
-  text-align: justify;
-}
-
-.page .service-card__list {
-  text-align: justify;
-}
-
 .page .stats p,
 .page .impact p {
   text-align: left;
-}
-
-.page .cxo-accordion .cxo-details__body {
-  text-align: justify;
 }
 
 .page .memberships-note__role,
