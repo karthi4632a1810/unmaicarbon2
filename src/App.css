@@ -2946,7 +2946,7 @@ button,
 }
 
 .project-detail__inner {
-  padding-block: 100px clamp(36px, 6vw, 64px);
+  padding-block: 60px clamp(36px, 6vw, 64px);
   width: min(1420px, 100% - var(--gutter) * 2);
 }
 
