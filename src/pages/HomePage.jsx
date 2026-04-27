@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import heroHomeBg from '../assets/hero-home.jpg'
+import heroHomeMob from '../assets/hero-home-mob.jpg'
 import heroVideo from '../assets/unmai-carbon.mp4'
 import {
   ContactIconLinkedIn,
@@ -55,14 +56,32 @@ function ServicePillarIcon({ index }) {
 }
 
 function HomePage() {
+  const heroBgVars = {
+    '--hero-bg-desktop': `url(${heroHomeBg})`,
+    '--hero-bg-mobile': `url(${heroHomeMob})`,
+  }
+
   return (
     <>
-      <header className="hero" id="top">
-        <div
-          className="hero__bg hero__bg--fixed-image"
-          style={{ backgroundImage: `url(${heroHomeBg})`, backgroundAttachment: 'fixed' }}
-          aria-hidden="true"
-        >
+      <section className="home-video-strip home-video-strip--lead mt-10" aria-label="UNMAI Carbon introduction video">
+        <div className="home-video-strip__inner">
+          <div className="home-video-strip__frame">
+            <video
+              className="home-video-strip__video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            >
+              <source src={heroVideo} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <header className="hero hero--home" id="top" style={heroBgVars}>
+        <div className="hero__bg hero__bg--fixed-image" aria-hidden="true">
           <div className="hero__overlay" />
         </div>
         <div className="hero__layer">
@@ -193,23 +212,6 @@ function HomePage() {
                 </Link>
               )
             })}
-          </div>
-        </div>
-      </section>
-
-      <section className="home-video-strip" aria-label="UNMAI Carbon introduction video">
-        <div className="home-video-strip__inner">
-          <div className="home-video-strip__frame">
-            <video
-              className="home-video-strip__video"
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="metadata"
-            >
-              <source src={heroVideo} type="video/mp4" />
-            </video>
           </div>
         </div>
       </section>

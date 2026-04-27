@@ -191,6 +191,16 @@ button,
   background-attachment: fixed;
 }
 
+.hero--home .hero__bg--fixed-image {
+  background-image: var(--hero-bg-desktop);
+}
+
+@media (max-width: 768px) {
+  .hero--home .hero__bg--fixed-image {
+    background-image: var(--hero-bg-mobile);
+  }
+}
+
 @media (max-width: 1024px) {
   .hero__bg--fixed-image {
     background-attachment: scroll;
@@ -203,9 +213,14 @@ button,
   }
 }
 
-/* Home: video block (after project spotlight) */
+/* Home: intro video (above hero) */
 .home-video-strip {
   padding-block: clamp(36px, 6vw, 64px);
+}
+
+.home-video-strip--lead {
+  padding-top: 92px;
+  padding-bottom: clamp(36px, 6vw, 64px);
 }
 
 .home-video-strip__inner {
