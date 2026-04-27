@@ -1,4 +1,4 @@
-/* UNMAI Carbon — capability landing */
+/* UNMAI CARBON — capability landing */
 
 :root {
   --ink: #0b1220;
@@ -195,6 +195,54 @@ button,
   object-fit: cover;
 }
 
+/* Home hero: fixed parallax-style background (background-attachment: fixed) */
+.hero__bg--fixed-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+  .hero__bg--fixed-image {
+    background-attachment: scroll;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__bg--fixed-image {
+    background-attachment: scroll;
+  }
+}
+
+/* Home: video block (after project spotlight) */
+.home-video-strip {
+  padding-block: clamp(36px, 6vw, 64px);
+}
+
+.home-video-strip__inner {
+  width: min(1200px, 100% - var(--gutter) * 2);
+  margin-inline: auto;
+}
+
+.home-video-strip__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: min(85vh, 900px);
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.home-video-strip__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -361,8 +409,8 @@ button,
 }
 
 .nav-bar__menu a:hover {
-  color: #2563eb;
-  border-bottom-color: #2563eb;
+  color: #000000;
+  border-bottom-color: #000000;
 }
 
 .nav-dropdown {
@@ -384,8 +432,8 @@ button,
 
 .nav-dropdown__toggle:hover,
 .nav-dropdown:focus-within .nav-dropdown__toggle {
-  color: #2563eb;
-  border-bottom-color: #2563eb;
+  color: #000000;
+  border-bottom-color: #000000;
 }
 
 .nav-dropdown__menu {
@@ -424,7 +472,7 @@ button,
   margin-left: 8px;
   padding: 10px 20px !important;
   border-radius: 999px !important;
-  background: #2563eb !important;
+  background: #000000 !important;
   color: #fff !important;
   font-weight: 600 !important;
   border: 0 !important;
@@ -2236,6 +2284,7 @@ button,
     right: 0 !important;
     bottom: 0 !important;
     margin: 0 !important;
+    padding: 30px;
   }
 
   .hero__sticky {
@@ -2355,7 +2404,7 @@ button,
   }
 
   .nav-bar__menu a:hover {
-    color: #2563eb;
+    color: #000000;
     border-bottom-color: #bfdbfe;
   }
 
@@ -2433,7 +2482,7 @@ button,
   }
 
   .nav-mobile-links a:hover {
-    color: #2563eb;
+    color: #000000;
     border-color: #bfdbfe;
     background: #eff6ff;
   }
@@ -2630,8 +2679,8 @@ button,
 }
 
 .nav-bar__menu a.active {
-  color: #2563eb;
-  border-bottom-color: #2563eb;
+  color: #000000;
+  border-bottom-color: #000000;
 }
 
 .site-main {

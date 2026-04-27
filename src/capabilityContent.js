@@ -1,4 +1,4 @@
-/** UNMAI Carbon Solutions — Capability Statement (source content) */
+/** UNMAI CARBON Solutions — Capability Statement (source content) */
 
 export const company = {
   legalName: 'UNMAI CARBON SOLUTIONS PTE LTD',
@@ -8,9 +8,9 @@ export const company = {
 }
 
 export const aboutParagraphs = [
-  'UNMAI Carbon Solutions Pte Ltd is a Singapore-headquartered global climate advisory and solutions firm engaged in unlocking high-integrity carbon markets. The firm works at the intersection of policy, finance, advisory, and digital innovation to deliver tailored solutions in decarbonization, net zero transition, and carbon markets.',
+  'UNMAI CARBON Solutions Pte Ltd is a Singapore-headquartered global climate advisory and solutions firm engaged in unlocking high-integrity carbon markets. The firm works at the intersection of policy, finance, advisory, and digital innovation to deliver tailored solutions in decarbonization, net zero transition, and carbon markets.',
   "The name UNMAI derives from the Tamil word உண்மை, meaning Truth, Authenticity, Integrity, and Real — embodying the firm's core philosophy: Truth, Transparency, Traceability and Integrity (T³I).",
-  'UNMAI Carbon engages with governments, corporates, and carbon market stakeholders worldwide, spanning Asia, Africa, the Middle East, and beyond.',
+  'UNMAI CARBON engages with governments, corporates, and carbon market stakeholders worldwide, spanning Asia, Africa, the Middle East, and beyond.',
 ]
 
 export const pillars = [
@@ -306,7 +306,7 @@ export const additionalAffiliationsIntro =
   'Alongside our governing memberships, we maintain other collaborative roles across standards, data infrastructure, and policy dialogue—supporting implementation at pace without compromising rigor or transparency.'
 
 export const partnershipsIntro =
-  'UNMAI Carbon maintains active partnerships and engagements across the global carbon ecosystem:'
+  'UNMAI CARBON maintains active partnerships and engagements across the global carbon ecosystem:'
 
 export const partnershipGroups = [
   {
@@ -377,7 +377,7 @@ export const impactStats = [
 
 export const contact = {
   name: 'Yuvaraj Dinesh Babu Nithyanandam',
-  role: 'Founder & CEO, UNMAI Carbon Solutions Pte Ltd',
+  role: 'Founder & CEO, UNMAI CARBON Solutions Pte Ltd',
   email: 'ydb@unmaicarbon.earth',
   web: 'www.unmaicarbon.earth',
   webUrl: 'https://www.unmaicarbon.earth',

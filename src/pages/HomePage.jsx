@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import heroHomeBg from '../assets/hero-home.jpg'
 import heroVideo from '../assets/unmai-carbon.mp4'
 import {
   ContactIconLinkedIn,
@@ -57,10 +58,11 @@ function HomePage() {
   return (
     <>
       <header className="hero" id="top">
-        <div className="hero__bg" aria-hidden="true">
-          <video className="hero__video" autoPlay muted loop playsInline preload="auto">
-            <source src={heroVideo} type="video/mp4" />
-          </video>
+        <div
+          className="hero__bg hero__bg--fixed-image"
+          style={{ backgroundImage: `url(${heroHomeBg})`, backgroundAttachment: 'fixed' }}
+          aria-hidden="true"
+        >
           <div className="hero__overlay" />
         </div>
         <div className="hero__layer">
@@ -103,7 +105,7 @@ function HomePage() {
               Scale &amp; depth
             </h2>
             <p className="stats__lede">
-              Highlights from UNMAI Carbon&apos;s direct assignments and CXO experience.
+              Highlights from UNMAI CARBON&apos;s direct assignments and CXO experience.
             </p>
           </div>
           <div className="stats__grid">
@@ -191,6 +193,23 @@ function HomePage() {
                 </Link>
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="home-video-strip" aria-label="UNMAI Carbon introduction video">
+        <div className="home-video-strip__inner">
+          <div className="home-video-strip__frame">
+            <video
+              className="home-video-strip__video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+            >
+              <source src={heroVideo} type="video/mp4" />
+            </video>
           </div>
         </div>
       </section>

@@ -63,7 +63,7 @@ function SiteLayout() {
                 <span className="nav-bar__mark nav-bar__mark--logo">
                   <img src={brandLogo} alt="UNMAI logo" />
                 </span>
-                <span className="nav-bar__wordmark">UNMAI Carbon</span>
+                <span className="nav-bar__wordmark">UNMAI CARBON</span>
               </Link>
               <button
                 type="button"
@@ -124,7 +124,7 @@ function SiteLayout() {
               <img src={brandLogo} alt="UNMAI logo" />
             </div>
             <div>
-              <p className="footer-new__brand-name">UNMAI Carbon</p>
+              <p className="footer-new__brand-name">UNMAI CARBON</p>
               <p className="footer-new__tagline">Truth · Transparency · Traceability · Integrity</p>
               <p className="footer-new__address">
                 10, Sim Lim Tower, Jalan Besar #10-10, Singapore 208787
@@ -171,7 +171,7 @@ function SiteLayout() {
         </div>
         <div className="footer-new__bottom-wrap">
           <div className="footer-new__bottom section">
-            <p>© 2026 UNMAI Carbon Solutions Pte Ltd. All rights reserved.</p>
+            <p>© 2026 UNMAI CARBON Solutions Pte Ltd. All rights reserved.</p>
             <p>{footerConfidential}</p>
           </div>
         </div>

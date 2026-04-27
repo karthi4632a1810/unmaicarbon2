@@ -23,7 +23,7 @@ function submitInquiryToGmail(e) {
     message,
   ].join('\n')
   const href = gmailComposeHref(contact.email, {
-    subject: 'Inquiry from UNMAI Carbon website',
+    subject: 'Inquiry from UNMAI CARBON website',
     body,
   })
   window.open(href, '_blank', 'noopener,noreferrer')
